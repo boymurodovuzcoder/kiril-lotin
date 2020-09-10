@@ -1,54 +1,67 @@
+textarea::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #4285F4;
+}
+
 body {
     background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-  }
-  .copied {
+}
+
+.copied {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     color: green;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-  }
-  .buttons {
+}
+
+.buttons {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-  }
-  .pad-top {
-    padding-top: 20px;
-  }
-  a {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+a {
     text-decoration: none;
     color: white;
-    width: 200px;
-    height: 100px;
+    height: 0;
     background: #F2385A;
-    margin: 30px;
-    top: 100px;
     padding: 16px;
     font-size: 20px;
     border-radius: 10px;
     box-shadow: 0px 15px 0px 0px #f02046, 0px 0px 20px 0px #bbb;
     transition: all 0.2s;
-  }
-  
-  a:active {
+}
+
+a:active {
     top: 108px;
     box-shadow: 0px 7px 0px 0px #f02046;
-  }
-  
-  .button1 {
+}
+
+.button1 {
     background-color: #F2385A;
-  }
-  
-  .button2 {
+}
+
+.button2 {
     background-color: #3498DB;
     box-shadow: 0px 15px 0px 0px #258cd1;
-  }
-  .button2:active {
+}
+
+.button2:active {
     box-shadow: 0px 7px 0px 0px #258cd1;
-  }
+}
+
+#TextArea {
+    margin-bottom: 1rem;
+}

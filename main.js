@@ -10,12 +10,16 @@ $(document).ready(function() {
         if ($("#text").val()) {
             $("#TextArea").select();
             document.execCommand("copy");
-            $(".copied p").text("Nusxalandi");
-            $(".copied p").css("color", "green");
+            $(".copied .alert").text("Nusxalandi");
+            $(".copied .alert").css("color", "green");
+            $(".copied .alert").addClass('alert-success')
+            $(".copied .alert").removeClass('alert-danger')
             $(".copied").fadeIn(500);
         } else {
-            $(".copied p").text("Nusxalashga hech narsa yo'q!");
-            $(".copied p").css("color", "red");
+            $(".copied .alert").text("Nusxalashga hech narsa yo'q!");
+            $(".copied .alert").css("color", "red");
+            $(".copied .alert").addClass('alert-danger')
+            $(".copied .alert").removeClass('alert-success')
             $(".copied").fadeIn(500);
         }
     });
@@ -35,7 +39,7 @@ $(document).ready(function() {
 
     class charTranslater {
         constructor(sentence, identify) {
-            this.sentence = sentence;
+            this.sentence = " " + sentence + " ";
             this.identify = identify;
             this.lotin_to_kiril = {
                 "a": "а",
@@ -184,7 +188,7 @@ $(document).ready(function() {
                             output.push(this.lotin_to_kiril[this.sentence[index]])
                         }
                     } else if (this.sentence[index] == "'") {
-                        output.push("ь")
+                        output.push("ъ")
                     } else {
                         output.push(this.sentence[index])
                     }
@@ -193,7 +197,6 @@ $(document).ready(function() {
             } else if (this.identify === "kiril") {
                 index = 0;
                 output = [];
-
 
                 while (index < this.sentence.length) {
                     if (this.sentence[index].toLowerCase() in this.kiril_to_lotin) {
@@ -215,10 +218,8 @@ $(document).ready(function() {
                             } else if ((this.sentence[index] == "Е") && !(this.sentence[index - 1].toLowerCase() in this.kiril_to_lotin)) {
                                 if ((this.sentence[index - 1] == this.sentence[index - 1].toUpperCase()) || (this.sentence[index + 1] == this.sentence[index + 1].toUpperCase())) {
                                     output.push("YE")
-                                } else {
-                                    output.push("")
+                                    console.log("working")
                                 }
-
                             } else if (this.sentence[index] == "Ё") {
                                 if ((this.sentence[index - 1] == this.sentence[index - 1].toUpperCase()) || (this.sentence[index + 1] == this.sentence[index + 1].toUpperCase())) {
                                     output.push("YO")
@@ -251,6 +252,8 @@ $(document).ready(function() {
                     index += 1
                 }
             }
+            output.pop()
+            output.shift()
             var result = output.join("")
             return result
         }
