@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -9,31 +9,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fun_textare.css">
-    <link rel="stylesheet" href="autoexpand.css">
-
     <title>Kiril-Lotin</title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <div class="buttons pad-top"><a class="button1" href="#" id="clear">Tozalsh</a></div>
-    <!--Type-->
-    <div id="wrapper">
-        <form id="paper">
-            <textarea placeholder="" id="text" name="text" rows="5000" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
-        </form>
+
+
+    <textarea placeholder="" id="text" name="text" rows="5000" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
+
+
+    <div class="copied">
+        <p>nusxalandi</p>
     </div>
-    <div class="copied"><p>nusxalandi</p></div>
     <div class="buttons"><a class="button2" href="#" id="copy">Nusxalash</a></div>
-    
-    <!--Result-->
-    <div ng-app="myApp" class="wrapper1">
-    <div ng-controller="AppCtrl">
+
     <textarea id="TextArea" ng-model="loremIpsum" style="height: 160px;" ng-keyup="autoExpand($event)" readonly>
     </textarea>
-      </div>
     </div>
-            
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -44,5 +40,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
-  </body>
+</body>
+
 </html>
